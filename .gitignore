@@ -1,0 +1,11 @@
+## python environment
+v
+
+# zip files
+*.zip
+
+sources.json
+
+env.py
+
+/manifest.json

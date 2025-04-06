@@ -1,0 +1,20 @@
+{
+    "name": "Stars",
+    "description": "mono repo Web Extension",
+    "version": "0.1",
+    "manifest_version": 3,
+    "action": {
+        "default_popup": "main.html",
+        "default_icon": "icon/icon.png"
+    },
+    "content_scripts": [
+        {
+            "js": [
+                "scripts/content.js"
+            ],
+            "matches": [
+                "https://dlxh.ceppea.net/*"
+            ]
+        }
+    ]
+}

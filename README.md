@@ -25,9 +25,9 @@
 git clone https://github.com/cheer-star/chrome-plugins.git
 ```
 
-1. 打开浏览器，进入扩展程序页面
-2. 点击“加载已解压的扩展程序”
-3. 选择需要的项目文件夹
+2. 打开浏览器，进入扩展程序页面
+3. 点击“加载已解压的扩展程序”
+4. 选择需要的项目文件夹
 
 这样就可以在浏览器中使用扩展程序了。
 
@@ -35,4 +35,10 @@ git clone https://github.com/cheer-star/chrome-plugins.git
 
 ### Download
 
-从网页上下载文件
+> 项目路径: https://github.com/cheer-star/chrome-plugins/tree/main/packages/download
+
+这个项目是从网站上获取大量的远程文件链接，保存这些文件链接并保存成json文件，然后使用curl进行批量下载。
+
+这样可以保证下载文件包含在文件夹内。
+
+> TODO: 这个插件不具有公共使用性，但可以作为一般浏览器插件的典型模板。

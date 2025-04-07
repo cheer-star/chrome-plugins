@@ -8,4 +8,6 @@ sources.json
   
 env.py
 
-project_data.json
+project_data*
+
+target

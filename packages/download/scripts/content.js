@@ -6,6 +6,15 @@
  * 5. 无项目后，下载 json 文件
  */
 
+const node_list = {
+    "HD": "#ProjectGroup_hlGroupName_7",
+
+    "project_max": 263,
+
+    "FJ": "#form1 > div:nth-child(20) > ul > li:nth-child(2)"
+}
+
+
 /**
  * 点击`项目清单`
  * @returns {boolean}
@@ -28,7 +37,7 @@ function clickProjectList() {
  * @returns {boolean}
  */
 function clickProjectGroup(document) {
-    const elementSelector = '#ProjectGroup_hlGroupName_3';
+    const elementSelector = node_list.HD;
     const projectGroupElement = document.querySelector(elementSelector);
     if (projectGroupElement) {
         projectGroupElement?.click();
@@ -53,7 +62,7 @@ function clickProject(document, index) {
         return true;
     } else {
         // 如果没有项目了， 说明已经遍历完所有项目
-        if (index > 55) {
+        if (index > node_list.project_max) {
             setParameter('index', -1);
         }
     }
@@ -65,7 +74,7 @@ function clickProject(document, index) {
  */
 
 function clickAttachment(document) {
-    const elementSelector = '#form1 > div:nth-child(20) > ul > li:nth-child(3)';
+    const elementSelector = node_list.FJ;
     const attachmentElement = document.querySelector(elementSelector);
 
     if (attachmentElement) {
@@ -222,5 +231,4 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     }
  
     sendResponse({ status: "success" });
-    // return true;
 });
